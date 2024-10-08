@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Souls Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/yaw8eiu.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Dark Souls</h1>
+      <div id="quiz">
+        <div id="question-container">
+          <p id="question">Question goes here</p>
+          <img id="question-img" src="" alt="Question Image" />
+        </div>
+        <div class="answer-buttons">
+          <button class="answer-btn" onclick="selectAnswer(0)">Answer 1</button>
+          <button class="answer-btn" onclick="selectAnswer(1)">Answer 2</button>
+          <button class="answer-btn" onclick="selectAnswer(2)">Answer 3</button>
+          <button class="answer-btn" onclick="selectAnswer(3)">Answer 4</button>
+        </div>
+        <div id="score"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+      </div>
+    </div>
+    <script src="ds1.js"></script>
+  </body>
+</html>

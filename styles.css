@@ -1,0 +1,231 @@
+/* Body Styles */
+body {
+    background: url(img/darksign.png) center/cover no-repeat;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+/* Quiz Container */
+.quiz-container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: rgba(46, 46, 48, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .quiz-container {
+        background: linear-gradient(135deg, #2b2b2b, #1d1d1d, #131313, #000);
+        border-radius: 0;
+    }
+}
+
+/* Headings */
+h1 {
+    color: #d4af37;
+    font-family: "trajan-pro-3", sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-shadow: #000 2px 2px 2px;
+}
+
+/* Intro Text */
+.intro {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 500px;
+    color: rgb(184, 184, 184);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Game Images Container */
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Game Item */
+.game-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Images */
+.game-item img {
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.5s ease;
+    filter: brightness(1);
+}
+
+@media screen and (max-width: 480px) {
+    .game-item img {
+        box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 8px;
+    }
+}
+
+
+.game-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Captions */
+.caption {
+    font-family: "trajan-pro-3", sans-serif;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #d4af37;
+    text-transform: uppercase;
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0a17e;
+}
+
+/* Question Image */
+#question-img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Answer Buttons */
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-btn {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #444;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.answer-btn:hover {
+    background-color: #d4af37;
+}
+
+/* Correct Answer Style */
+.answer-btn.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Incorrect Answer Style */
+.answer-btn.incorrect {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Next Button */
+#next-btn {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Score */
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .intro {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #question-img {
+        width: 70%;
+    }
+
+    .game-item img {
+        width: 150px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .game-item img {
+        width: 70%;
+        height: auto;
+    }
+
+    #question-img {
+        width: 80%;
+    }
+}
